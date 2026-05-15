@@ -1,6 +1,6 @@
 {
   "name": "@quiple/blog-fonts",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "dist/fonts.css",
   "sass": "src/fonts.sass",
   "style": "dist/fonts.css",
