@@ -1,0 +1,35 @@
+{
+  "name": "@quiple/blog-fonts",
+  "version": "1.0.0",
+  "main": "dist/fonts.css",
+  "sass": "src/fonts.sass",
+  "style": "dist/fonts.css",
+  "exports": {
+    ".": "./dist/fonts.css",
+    "./sass": "./src/fonts.sass",
+    "./fonts/*": "./fonts/*"
+  },
+  "files": [
+    "dist",
+    "src",
+    "fonts"
+  ],
+  "scripts": {
+    "build": "sass src/fonts.sass dist/fonts.css",
+    "prepublishOnly": "npm run build",
+    "release": "npm run build && npm publish",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fonts",
+    "sass",
+    "css"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "description": "Font sass and css distribution",
+  "devDependencies": {
+    "sass": "^1.99.0"
+  }
+}
