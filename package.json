@@ -17,7 +17,7 @@
   "scripts": {
     "build": "sass src/fonts.sass dist/fonts.css",
     "prepublishOnly": "npm run build",
-    "release": "npm run build && npm publish",
+    "release": "npm run build && npm publish --access=public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
