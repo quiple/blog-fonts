@@ -1,0 +1,37 @@
+$geist-fonts: 375 Light, 500 Regular, 675 Medium, 800 SemiBold
+$bookk-fonts: 400 Light, 450 Bold
+
+@font-face
+  font:
+    family: Asta Sans
+    style: normal
+    weight: 300 800
+    display: swap
+  src: url('/fonts/AstaSans.woff2') format('woff2')
+
+@font-face
+  font:
+    family: STIXTwoText
+    style: normal
+    weight: 400 700
+    display: swap
+  src: url('/fonts/stix/STIXTwoText-VariableFont_wght.woff2') format('woff2')
+
+@each $weight, $name in $geist-fonts
+  @font-face
+    font:
+      family: Geista
+      style: normal
+      weight: $weight
+      display: swap
+    src: url('/fonts/geista/Geista-#{$name}.woff2') format('woff2')
+
+@each $weight, $name in $bookk-fonts
+  @font-face
+    font:
+      family: BookkMyungjo-web
+      style: normal
+      weight: $weight
+      display: swap
+    src: url('/fonts/bookk/BookkMyungjo_#{$name}.woff2') format('woff2')
+    size-adjust: 98%
