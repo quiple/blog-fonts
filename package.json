@@ -1,12 +1,19 @@
 {
   "name": "@quiple/blog-fonts",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "main": "dist/fonts.css",
+  "types": "dist/fonts.d.ts",
   "sass": "src/fonts.sass",
   "style": "dist/fonts.css",
   "exports": {
-    ".": "./dist/fonts.css",
-    "./sass": "./src/fonts.sass",
+    ".": {
+      "types": "./dist/fonts.d.ts",
+      "default": "./dist/fonts.css"
+    },
+    "./sass": {
+      "types": "./src/fonts.d.ts",
+      "default": "./src/fonts.sass"
+    },
     "./fonts/*": "./fonts/*"
   },
   "files": [
@@ -15,7 +22,7 @@
     "fonts"
   ],
   "scripts": {
-    "build": "sass src/fonts.sass dist/fonts.css",
+    "build": "sass src/fonts.sass dist/fonts.css && node -e \"require('fs').copyFileSync('src/fonts.d.ts', 'dist/fonts.d.ts')\"",
     "prepublishOnly": "npm run build",
     "release": "npm run build && npm publish --access=public",
     "test": "echo \"Error: no test specified\" && exit 1"
